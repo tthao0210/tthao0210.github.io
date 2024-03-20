@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+    <form name="hinhchunhatform">
+        <input type="text" name="dai" id="dai" placeholder="chiều dài"><br>
+        <input type="text" name="rong" id="rong" placeholder="chiều rộng"><br>
+        <input type="button" value="Kết quả" onclick="hinhchunhat()">
+        <h1 id="chuvi"></h1>
+        <h2 id="dientich"></h2>
+    </form>
+</body>
+<script>
+    function hinhchunhat() {
+        var dai = document.getElementById("dai").value;
+        var rong = document.getElementById("rong").value;
+        var chuvi = (parseInt(dai) + parseInt(rong)) * 2;
+        var dientich = parseInt(dai) * parseInt(rong);
+        //alert(chuvi + " " + dientich);
+        document.getElementById("chuvi").innerHTML = "Chu vi của hình chữ nhật có dài " + dai + " và rộng " + rong + " là: " + chuvi;
+        document.getElementById("dientich").innerHTML = "Diện tích của hình chữ nhật có dài " + dai + " và rộng " + rong + " là: " + dientich;
+    }
+</script>
+</html>
