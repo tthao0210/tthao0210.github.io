@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+        <input type="text" id="dai">
+        <input type="text" id="rong">
+        <button onclick="chuvi();">
+            Chu vi
+        </button>
+</body>
+<script>
+    function chuvi() {
+        var dai = document.getElementById("dai").value;
+        var rong = document.getElementById("rong").value;
+        var chuvi = (parseInt(dai) + parseInt(rong)) * 2;
+        alert(chuvi);
+    }
+</script>
+</html>
