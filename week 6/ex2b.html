@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hình tròn</title>
+</head>
+<body>
+    <form name="hinhtronform">
+        <input type="text" name="ban" id="ban" placeholder="Bán kính"><br>
+        <input type="button" value="Kết quả" onclick="hinhtron()">
+        <h1 id="chuvi"></h1>
+        <h2 id="dientich"></h2>
+    </form>
+</body>
+<script>
+    function hinhtron() {
+        var ban = document.getElementById("ban").value;
+        var chuvi = (parseInt(ban) * 2) * (3.14);
+        var dientich = (parseInt(ban) * parseInt(ban)) * (3.14);
+        //alert(chuvi + " " + dientich);
+        document.getElementById("chuvi").innerHTML = "Chu vi của hình tròn là: " + chuvi;
+        document.getElementById("dientich").innerHTML = "Diện tích của hình tròn là: " + dientich;
+    }
+</script>
+</html>
